@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "fundraise",
   "version": "0.1.0",
   "private": true,
@@ -45,6 +46,8 @@
   }
 }
 =======
+=======
+>>>>>>> 9bf2c554b34bed6311368599b42466def84d46c6
     "name": "fundraise",
     "version": "0.1.0",
     "private": true,
@@ -90,5 +93,9 @@
         "postcss-cli": "^9.0.1",
         "tailwindcss": "^2.2.17"
     }
+<<<<<<< HEAD
+}
+>>>>>>> 9bf2c554b34bed6311368599b42466def84d46c6
+=======
 }
 >>>>>>> 9bf2c554b34bed6311368599b42466def84d46c6
