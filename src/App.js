@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as  Router,Switch,Route } from 'react-router-dom';
+import Navbar from './COMPONENTS/HEADER/Navbar';
+import Home from './COMPONENTS/HOME__PAGE/Home';
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './COMPONENTS/FOOTER/Footer';
+import Join_us from './COMPONENTS/JOIN US/Join_us';
+import Display_representatives from './COMPONENTS/ADMIN/MANAGE STATE REPRESENTATIVE/Display_representatives';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Router>
+      <Navbar/>
+    <Switch>
+        <Route path="/join_us">
+          <Join_us/>
+        </Route>
+        <Route path="/assam_representative">
+          <Display_representatives/>
+        </Route>
+        <Route path="/" component={Home}/>
+    </Switch>
+    </Router>
   );
 }
 
