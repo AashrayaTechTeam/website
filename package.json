@@ -1,6 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   "name": "fundraise",
   "version": "0.1.0",
   "private": true,
@@ -45,57 +43,5 @@
     "gh-pages": "^3.2.3"
   }
 }
-=======
-=======
->>>>>>> 9bf2c554b34bed6311368599b42466def84d46c6
-    "name": "fundraise",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^5.14.1",
-        "@testing-library/react": "^11.2.7",
-        "@testing-library/user-event": "^12.8.3",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-scripts": "4.0.3",
-        "web-vitals": "^1.1.2"
-    },
-    "scripts": {
-        "start": "npm run watch:css && react-scripts start",
-        "build": "npm run watch:css && react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "watch:css": "postcss src/styles/tailwind.css -o src/styles/output.css"
 
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "devDependencies": {
-        "autoprefixer": "^10.3.7",
-        "gh-pages": "^3.2.3",
-        "postcss": "^8.3.9",
-        "postcss-cli": "^9.0.1",
-        "tailwindcss": "^2.2.17"
-    }
-<<<<<<< HEAD
-}
->>>>>>> 9bf2c554b34bed6311368599b42466def84d46c6
-=======
-}
->>>>>>> 9bf2c554b34bed6311368599b42466def84d46c6
+  
