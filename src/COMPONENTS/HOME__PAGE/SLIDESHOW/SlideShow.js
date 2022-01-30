@@ -1,31 +1,63 @@
-import React from 'react'
+import React from "react";
+import { Button, Carousel, Image } from "react-bootstrap";
+import books from "../../../ASSETS/images/books.jpg";
+import book from "../../../ASSETS/images/book.jpg";
+import library from "../../../ASSETS/images/library.jpg";
+import "./slideShow.css";
+import { Link } from "react-router-dom";
+let imageArray = [
+  {
+    src: books,
+    content:
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    header:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  {
+    src: book,
+    content:
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    header:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  {
+    src: library,
+    content:
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    header:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+];
 
 function SlideShow() {
-    return (
-        <div>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" style={{background:"black" , maxHeight:"92vh"}}>
-                    <div class="carousel-item active" >
-                    <img style={{opacity:"40%"}} src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="photo"/>
+  return (
+    <section>
+    <div style={{background:"black" , width:"100%" , height:"90vh" ,position:"absolute"}}></div>
+      <Carousel interval={3000}>
+        {imageArray.map((element, i) => {
+          return (
+            <Carousel.Item style={{ height: "90vh" }}>
+              <div
+                className="bg-image"
+                style={{ backgroundImage: `url(${element.src})`, opacity:"0.5" }}
+              />
+              <div className="bg-background">
+                <div className="bg-textdiv">
+                  <div className="bg-text">
+                    <h1 style={{ color: "white" }}>{element.header}</h1>
+                    <p>{element.content}</p>
+                    <div className="joinUs">
+                      <Link to="/join_us">Join Us</Link>
                     </div>
-                    <div class="carousel-item">
-                    <img style={{opacity:"40%"}} src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="..."/>
-                    </div>
-                    <div class="carousel-item">
-                    <img style={{opacity:"40%"}} src="https://images.unsplash.com/photo-1561657819-51c0511e35ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80" class="d-block w-100" alt="..."/>
-                    </div>
+                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-                </div>
-        </div>
-    )
+              </div>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
+    </section>
+  );
 }
 
-export default SlideShow
+export default SlideShow;
