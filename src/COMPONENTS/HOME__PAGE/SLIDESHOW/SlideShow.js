@@ -3,47 +3,58 @@ import { Button, Carousel, Image } from "react-bootstrap";
 import books from "../../../ASSETS/images/books.jpg";
 import book from "../../../ASSETS/images/book.jpg";
 import library from "../../../ASSETS/images/library.jpg";
-let imageArray = [books, book, library];
+import "./slideShow.css";
+import { Link } from "react-router-dom";
+let imageArray = [
+  {
+    src: books,
+    content:
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    header:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  {
+    src: book,
+    content:
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    header:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  {
+    src: library,
+    content:
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    header:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+];
 
 function SlideShow() {
-  var textStyle = {
-    position: "absolute",
-    top: "10%",
-    padding: "10%",
-  };
   return (
     <section>
-      <div style={{ width: "100%", height: "400px" }}>
-        <Carousel interval={3000} indicators="false">
-          {imageArray.map((element, i) => {
-            return (
-              <Carousel.Item className="hello">
-                <img
-                  className="d-block w-100"
-                  src={element}
-                  alt={`carousel${i}`}
-                  style={{ opacity: 1, height: "600px" }}
-                />
-                <div style={textStyle}>
-                  <h1 style={{ color: "white" }}>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                  </h1>
-                  <p>
-                    It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release
-                    of Letraset sheets containing Lorem Ipsum passages, and more
-                    recently with desktop publishing software like Aldus
-                    PageMaker including versions of Lorem Ipsum.
-                  </p>
-                  <Button>Join US</Button>
+      <Carousel interval={3000}>
+        {imageArray.map((element, i) => {
+          return (
+            <Carousel.Item style={{ height: "600px" }}>
+              <div
+                className="bg-image"
+                style={{ backgroundImage: `url(${element.src})` }}
+              />
+              <div className="bg-background">
+                <div className="bg-textdiv">
+                  <div className="bg-text">
+                    <h1 style={{ color: "white" }}>{element.header}</h1>
+                    <p>{element.content}</p>
+                    <div className="joinUs">
+                      <Link to="/join_us">Join Us</Link>
+                    </div>
+                  </div>
                 </div>
-              </Carousel.Item>
-            );
-          })}
-        </Carousel>
-      </div>
+              </div>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
     </section>
   );
 }

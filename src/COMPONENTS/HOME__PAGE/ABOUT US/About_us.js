@@ -2,7 +2,7 @@ import React from 'react'
 
 function About_us() {
     return (
-        <div style={{width:"100%" , height:"400px" , background:"gray" , color:"white" , textAlign:"center"}}>
+        <div style={{width:"100%" , height:"400px" , background:"white" , color:"black" , textAlign:"center"}}>
             <h1>About Aashraya</h1>
         </div>
     )
