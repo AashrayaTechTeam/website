@@ -32,11 +32,11 @@ let imageArray = [
 function SlideShow() {
   return (
     <section>
-    <div style={{background:"black" , width:"100%" , height:"600px" ,position:"absolute"}}></div>
+    <div style={{background:"black" , width:"100%" , height:"90vh" ,position:"absolute"}}></div>
       <Carousel interval={3000}>
         {imageArray.map((element, i) => {
           return (
-            <Carousel.Item style={{ height: "600px" }}>
+            <Carousel.Item style={{ height: "90vh" }}>
               <div
                 className="bg-image"
                 style={{ backgroundImage: `url(${element.src})`, opacity:"0.5" }}
