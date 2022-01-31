@@ -1,14 +1,13 @@
 import React from 'react'
-import $ from 'jquery';
-import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Link } from 'react-router-dom';
+import Logo from '../../ASSETS/logo.jpg'
 function Navbar() {
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Aashraya</a>
+    <Link to="/" class="navbar-brand"><img alt='Aashraya' style={{width:"40px"}} src={Logo}/></Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,7 +16,7 @@ function Navbar() {
 
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            State Representatives
+            Team
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><Link to="/assam_representative" class="dropdown-item" >Assam</Link></li>
@@ -25,7 +24,7 @@ function Navbar() {
             <li><a class="dropdown-item" href="#">MP</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
+        {/* <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Volunteers
           </a>
@@ -34,7 +33,7 @@ function Navbar() {
             <li><a class="dropdown-item" href="#">Bihar</a></li>
             <li><a class="dropdown-item" href="#">MP</a></li>
           </ul>
-        </li>
+        </li> */}
 
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Blog</a>
