@@ -1,4 +1,6 @@
 .bg-image {
+  filter: blur(5px);
+  -webkit-filter: blur(8px);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,7 +11,7 @@
 /* Position text in the middle of the page/image */
 .bg-background {
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0 0 0 / 90%); /* Black w/opacity/see-through */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,16 +26,7 @@
   height: 100%;
   font-family: 'sans-serif';
 }
-.bg-text {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  padding: 20px;
-  height: 100%;
-  color: white;
-}
+
 .joinUs {
   float: right;
   border: 3px solid white;
@@ -50,4 +43,41 @@
 }
 .joinUs a:hover {
   color:white;
+}
+
+@media screen and (min-width: 300px) {
+  .bg-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .bg-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    color: white;
+  }
+}
+@media screen and (min-width: 600px) {
+  .bg-text {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    color: white;
+  }
 }

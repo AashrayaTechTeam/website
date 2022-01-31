@@ -35,10 +35,10 @@ function SlideShow() {
       <Carousel interval={3000}>
         {imageArray.map((element, i) => {
           return (
-            <Carousel.Item style={{ height: "90vh" }}>
+            <Carousel.Item style={{ height: "600px" }}>
               <div
                 className="bg-image"
-                style={{ backgroundImage: `url(${element.src})`, opacity:"0.5" }}
+                style={{ backgroundImage: `url(${element.src})` }}
               />
               <div className="bg-background">
                 <div className="bg-textdiv">
