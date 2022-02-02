@@ -9,7 +9,7 @@
 /* Position text in the middle of the page/image */
 .bg-background {
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0 0 0 /90%); /* Black w/opacity/see-through */
+  background-color: rgba(0 0 0 /80%); /* Black w/opacity/see-through */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -22,40 +22,86 @@
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: 'sans-serif';
+  color: white;
 }
 
-.joinUs {
-  float: right;
-  border: 3px solid white;
-  padding: 5px 25px;
-  color: white;
-  cursor: pointer;
-}
-.joinUs a {
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  font-family: 'sans-serif';
-}
-.joinUs a:hover {
-  color:white;
-}
-
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 390px) {
   .bg-text {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
     height: 100%;
     color: white;
+    padding: 10px;
+  }
+  .joinUsDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .joinUs {
+    display: flex;
+    justify-content: center;
+    border: 3px solid white;
+    padding: 5px 25px;
+    color: white;
+    cursor: pointer;
+  }
+  .joinUs a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .joinUs a:hover {
+    color: white;
   }
 }
-
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 390px) {
+  .bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    color: white;
+    padding: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+  .joinUsDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .joinUs {
+    display: flex;
+    justify-content: center;
+    border: 3px solid white;
+    padding: 10px 25px;
+    color: white;
+    cursor: pointer;
+  }
+  .joinUs a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .joinUs a:hover {
+    color: white;
+  }
+}
+.joinUs:hover {
+  background-color: white;
+}
+.joinUs:hover a {
+  color: black;
+}
+@media screen and (min-width: 460px) {
   .bg-text {
     position: absolute;
     top: 60%;
@@ -65,6 +111,27 @@
     height: 100%;
     padding: 20px;
     color: white;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+  .joinUsDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .joinUs {
+    display: flex;
+    justify-content: center;
+    border: 3px solid white;
+    padding: 10px 25px;
+    color: white;
+    cursor: pointer;
+  }
+  .joinUs a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
   }
 }
 @media screen and (min-width: 600px) {
@@ -77,5 +144,26 @@
     height: 100%;
     padding: 20px;
     color: white;
+    line-height: 20px;
+    letter-spacing: 2x;
+  }
+  .joinUsDiv {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+  }
+
+  .joinUs {
+    float: right;
+    border: 3px solid white;
+    padding: 10px 25px;
+    color: white;
+    cursor: pointer;
+  }
+  .joinUs a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
   }
 }

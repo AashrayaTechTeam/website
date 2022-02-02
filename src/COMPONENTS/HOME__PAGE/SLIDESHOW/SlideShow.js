@@ -32,21 +32,26 @@ let imageArray = [
 function SlideShow() {
   return (
     <section>
-      <Carousel interval={3000}>
+      <Carousel interval={3000} indicatorLabels={false} controls={false}>
         {imageArray.map((element, i) => {
           return (
-            <Carousel.Item style={{ height: '90vh' }}>
+            <Carousel.Item style={{ height: "90vh" }}>
               <div
                 className="bg-image"
-                style={{ backgroundImage: `url(${element.src})` , opacity:"0.5"}}
+                style={{
+                  backgroundImage: `url(${element.src})`,
+                  opacity: "0.5",
+                }}
               />
               <div className="bg-background">
                 <div className="bg-textdiv">
                   <div className="bg-text">
-                    <h1 style={{ color: "white" }}>{element.header}</h1>
+                    <h1>{element.header}</h1>
                     <p>{element.content}</p>
-                    <div className="joinUs">
-                      <Link to="/join_us">Join Us</Link>
+                    <div className="joinUsDiv">
+                      <div className="joinUs">
+                        <Link to="/join_us">Join Us</Link>
+                      </div>
                     </div>
                   </div>
                 </div>
