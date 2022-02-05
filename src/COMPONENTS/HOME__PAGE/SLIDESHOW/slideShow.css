@@ -9,7 +9,7 @@
 /* Position text in the middle of the page/image */
 .bg-background {
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0 0 0 /80%); /* Black w/opacity/see-through */
+  background-color: rgba(0 0 0 /70%); /* Black w/opacity/see-through */
   position: absolute;
   top: 50%;
   left: 50%;
