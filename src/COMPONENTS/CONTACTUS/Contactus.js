@@ -1,6 +1,6 @@
 import React from 'react'
 import './contactus.css';
-
+import { FaPhone,FaEnvelope,FaMapMarkerAlt,FaTwitter,FaInstagram,FaFacebook,FaYoutube } from 'react-icons/fa';
 function Contact_us() {
     return (
         
@@ -16,30 +16,30 @@ function Contact_us() {
           </h4>
           <p className='p-contactus'>Fill up the form and our team will get back</p>
           <div className="icon-text-contactus">
-            <i class="fa-contactus fa-phone" aria-hidden="true"></i>
+            < FaPhone className='fa-contactus'/>
             <span className='span-contactus'>123456789</span>
           </div>
           <div className="icon-text-contactus">
-            <i class="fa-contactus fa-envelope" aria-hidden="true"></i>
+          < FaEnvelope className='fa-contactus'/>
             <span className='span-contactus'>addyourmail.gmail.com</span>
           </div>
           <div className="icon-text-contactus">
-            <i class="fa-contactus fa-map-marker" aria-hidden="true"></i>
+          < FaMapMarkerAlt className='fa-contactus'/>
             <span className='span-contactus'>Aashraya main office address</span>
           </div>
           <div className="social-media-contactus">
             <a href="#" className="icon-circle-contactus">
-              <i class="fab-contactus fa-facebook-f"></i>
+            < FaTwitter className='fab-contactus'/>
             </a>
             <a href="#" className="icon-circle-contactus">
-              <i class="fab-contactus fa-twitter"></i>
+            < FaInstagram className='fab-contactus'/>
             </a>
             <a href="#" className="icon-circle-contactus">
-              <i class="fab-contactus fa-instagram"></i>
+            < FaFacebook className='fab-contactus'/>
 
             </a>
             <a href="#" className="icon-circle-contactus">
-              <i class="fab-contactus fa-youtube"></i>
+            < FaYoutube className='fab-contactus'/>
             </a>
           </div>
         </div>
