@@ -46,7 +46,10 @@ function Navbar() {
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/library">Library</a>
-        </li>       
+        </li>  
+        <li class="nav-item">
+          <Link to ="/Contactus" class="nav-link active" aria-current="page" >Contact Us</Link>
+        </li>     
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
