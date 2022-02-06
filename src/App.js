@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './COMPONENTS/FOOTER/Footer';
 import Join_us from './COMPONENTS/JOIN US/Join_us';
 import Display_representatives from './COMPONENTS/ADMIN/MANAGE STATE REPRESENTATIVE/Display_representatives';
+import Contactus from './COMPONENTS/CONTACTUS/Contactus';
 function App() {
   return (
     
@@ -14,6 +15,9 @@ function App() {
     <Switch>
         <Route path="/join_us">
           <Join_us/>
+        </Route>
+        <Route path="/Contactus">
+          <Contactus/>
         </Route>
         <Route path="/assam_representative">
           <Display_representatives/>
