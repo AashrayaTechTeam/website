@@ -1,0 +1,58 @@
+#navbar {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: medium;
+  overflow: hidden;
+  background-color: transparent;
+  transition: 0.5s all ease-in-out;
+  padding: 3px 1.5px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+#navbar a {
+  float: left;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 4px;
+}
+#navbar #logo {
+  transition: 0.5s all ease-in-out;
+}
+#navbar a:hover {
+  background-color: #fff;
+  color: black;
+  display: flex;
+}
+#navDropdown a {
+  background-color: #023047;
+  float: left;
+  color: #ece4db;
+  text-align: center;
+  text-decoration: none;
+  padding: 16px;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 0px;
+}
+#navDropdown a:hover {
+  background-color: #ffb703;
+  color: #023047;
+
+  display: flex;
+}
+@media screen and (max-width: 960px) {
+  #navbar {
+    transition: 0.5s all ease-in-out;
+    padding-top: 0px !important;
+  }
+  #navbar a {
+    float: none;
+    display: flex;
+    text-align: left;
+  }
+}

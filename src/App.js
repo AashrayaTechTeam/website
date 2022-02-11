@@ -1,27 +1,26 @@
-import { BrowserRouter as  Router,Switch,Route } from 'react-router-dom';
-import Navbar from './COMPONENTS/HEADER/Navbar';
-import Home from './COMPONENTS/HOME__PAGE/Home';
-import $ from 'jquery';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from './COMPONENTS/FOOTER/Footer';
-import Join_us from './COMPONENTS/JOIN US/Join_us';
-import Display_representatives from './COMPONENTS/ADMIN/MANAGE STATE REPRESENTATIVE/Display_representatives';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./COMPONENTS/HEADER/Navbar";
+import Home from "./COMPONENTS/HOME__PAGE/Home";
+import $ from "jquery";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./COMPONENTS/FOOTER/Footer";
+import Join_us from "./COMPONENTS/JOIN US/Join_us";
+import Display_representatives from "./COMPONENTS/ADMIN/MANAGE STATE REPRESENTATIVE/Display_representatives";
 function App() {
   return (
-    
     <Router>
-      <Navbar/>
-    <Switch>
+      <Navbar />
+
+      <Switch>
         <Route path="/join_us">
-          <Join_us/>
+          <Join_us />
         </Route>
         <Route path="/assam_representative">
-          <Display_representatives/>
+          <Display_representatives />
         </Route>
-        <Route path="/" component={Home}/>
-    </Switch>
+        <Route path="/" component={Home} />
+      </Switch>
     </Router>
-
   );
 }
 
