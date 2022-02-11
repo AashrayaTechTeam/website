@@ -1,27 +1,42 @@
-import React from "react"
+import React , {useState , useEffect} from 'react'
+import { Link ,useHistory} from 'react-router-dom'
+import $ from 'jquery'
+import '../../styles/Navbar/Navbar.css'
+import donate from "../../ASSETS/donate-vector.png"
+function Navbar() {
 
-const Navbar = (props)=>{
-    return <div className="absolute px-8 py-5 z-10 w-full top-0">
-        <ul className="text-white flex justify-center link-list">
-            <li>
-                <u>Home</u>
-            </li>
-            <li>
-                Blogs
-            </li>
-            <li>
-                Donate
-            </li>
-        </ul>
-        <div className="absolute top-0 p-3 bg-white bg-opacity-40 text-white ">
-            <p className="text-sm text-black">
-                teams
-            </p>
-            <h3 className="text-center text-4xl font-bold text-black">
-                A
-            </h3>
-        </div>
+
+  window.addEventListener('scroll' , function(){
+    let res = window.scrollY;
+    if(res >= 150)
+      $("#navbar").css({'backgroundColor':'rgba(0, 0, 0, 0.822)' , 'padding':'10px 20px' , 'transition':'all 1s' })  
+    else
+      $("#navbar").css({'backgroundColor':'transparent' , 'padding':'40px' })
+    
+  
+  })
+
+
+  return (
+    <div>
+      <nav id="navbar" className='navbar' style={{background:"transparent" , padding:"40px", width:"100%", height:"70px",
+    color:"white" , position:"fixed" , top:"0%" , left:"0%" , zIndex:"5"
+    }}>
+         <div class="nav-logo"><h3 class="logo">Aashraya</h3></div>
+
+<ul class="nav-links" id="links">
+  <li><a href="#">Team</a></li>
+  <li><a href="#">Blog</a></li>
+  <li><a href="#">Join Us</a></li>
+  <li><a href="#">Library</a></li>
+  <li><a href="#">Gallery</a></li>
+  <li><a href="#">Donate</a></li>
+  <img src={donate} style={{position:"absolute" , right:"1%" , width:"120px"}} />
+</ul>
+      </nav>
     </div>
+
+  )
 }
 
 export default Navbar

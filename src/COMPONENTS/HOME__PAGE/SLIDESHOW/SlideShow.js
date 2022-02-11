@@ -35,7 +35,7 @@ function SlideShow() {
       <Carousel interval={3000} indicatorLabels={false} controls={false}>
         {imageArray.map((element, i) => {
           return (
-            <Carousel.Item style={{ height: "90vh" }}>
+            <Carousel.Item style={{ height: "100vh" }}>
               <div
                 className="bg-image"
                 style={{
