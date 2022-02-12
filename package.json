@@ -1,7 +1,7 @@
 {
   "name": "fundraise",
   "version": "0.1.0",
-  "homepage":" https://aashrayatechteam.github.io/website/",
+  "homepage":"https://himangshu1086.github.io/OfficalSiteAashraya/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
