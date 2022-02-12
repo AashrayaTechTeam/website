@@ -1,0 +1,16 @@
+.carousel-caption {
+    margin-bottom: 15rem;
+  }
+  .main-header {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .img-thumbnail {
+    width: 20rem;
+    height: 15rem;
+  }
+  body,
+  html,
+  * {
+    font-family: "Architects Daughter", cursive;
+  }

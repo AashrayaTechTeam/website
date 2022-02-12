@@ -3,8 +3,11 @@ import logo from '../../../ASSETS/logo.jpg'
 import './About_us.css'
 
 function About_us() {
+
+
     return (
-		<> <div className="heading">
+		<div id="aboutUs"> 
+        <div className="heading">
                 <h1>What Aashraya Does ?</h1>
 			</div>
         
@@ -22,7 +25,7 @@ function About_us() {
                 </p>
             </div>
 		</div>
-		</>
+		</div>
     )
 }
 
