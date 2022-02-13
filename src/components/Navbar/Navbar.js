@@ -9,7 +9,7 @@ function Navbar() {
   window.addEventListener('scroll' , function(){
     let res = window.scrollY;
     if(res >= 150)
-      $("#navbar").css({'backgroundColor':'rgba(0, 0, 0, 0.822)' , 'padding':'10px 20px' , 'transition':'all 1s' })  
+      $("#navbar").css({'backgroundColor':'rgba(0, 0, 0, 0.884)' , 'padding':'10px 20px' , 'transition':'all 1s' })  
     else
       $("#navbar").css({'backgroundColor':'transparent' , 'padding':'40px' })
     
