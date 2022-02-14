@@ -23,7 +23,7 @@
     list-style: none;
     justify-content: space-evenly;
     width: 40%;
-    gap: 0.5em;
+    gap: 1.4em;
   }
   .nav-links li a {
     line-height: 2.5;
@@ -62,3 +62,10 @@
     z-index: 0;
   }
   
+  .nav-links > img {
+    position:absolute;
+    right:-5%;
+    bottom: -9%;
+    width:120px;
+
+  }

@@ -17,6 +17,9 @@ function About_us() {
 			</div> 
             <div className="content">
                 <p>
+                Aashraya is an independent student(s)
+Organization which aims it's efforts for
+the holistic welfare of all living beings.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores 
                     soluta sit perspiciatis culpa quis nulla vel dicta maxime dolore 
                     optio minima officiis obcaecati aut, eius laborum corporis ducimus 

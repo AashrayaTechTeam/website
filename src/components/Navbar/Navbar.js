@@ -11,7 +11,7 @@ function Navbar() {
     if(res >= 150)
       $("#navbar").css({'backgroundColor':'rgba(0, 0, 0, 0.884)' , 'padding':'10px 20px' , 'transition':'all 1s' })  
     else
-      $("#navbar").css({'backgroundColor':'transparent' , 'padding':'40px' })
+      $("#navbar").css({'backgroundColor':'transparent' , 'padding':'40px 60px' })
     
   
   })
@@ -24,14 +24,15 @@ function Navbar() {
     }}>
          <div class="nav-logo"><h3 class="logo">Aashraya</h3></div>
 
-<ul class="nav-links" id="links">
+<ul class="nav-links" id="links" style={{position:"relative" , right:"3%"}}>
   <li><a href="#">Team</a></li>
   <li><a href="#">Blog</a></li>
   <li><a href="#">Join Us</a></li>
   <li><a href="#">Library</a></li>
+  <li><a href="#">Projects</a></li>
   <li><a href="#">Gallery</a></li>
   <li><a href="#">Donate</a></li>
-  <img src={donate} style={{position:"absolute" , right:"1%" , width:"120px"}} />
+  <img src={donate} alt="..."/>
 </ul>
       </nav>
     </div>
