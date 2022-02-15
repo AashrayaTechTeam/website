@@ -2,20 +2,14 @@
   margin: 0;
   display: flex;
   background-color: #fff;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
 }
-/* optional: alternately flips module layout 
-  .flex:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
-  */
+
 .flex img {
   flex: 1;
-  width: 250px;
+  width: 300px;
 }
 .flex div:last-child {
-  margin: 4rem;
+  margin: 2rem;
   flex: 2;
 }
 .flex h3 {
@@ -24,17 +18,19 @@
   font-weight: 400;
 }
 .flex p {
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-size: 22px;
+  padding: 36px;
+  margin-right: 5%;
 }
 .flex p:last-of-type {
   margin-bottom: 0;
 }
 .column {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 90%;
 }
 .aboutUsImage {
   display: flex;
@@ -43,12 +39,12 @@
   margin: auto;
 }
 .heading {
-    text-align: center;
-    margin-top: 2rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 @media all and (max-width: 700px) {
   h2 {
-    margin: 1rem;
+    margin: 20px;
   }
   .flex {
     border: 0;
@@ -86,3 +82,4 @@
     min-height: 200px;
   }
 }
+
