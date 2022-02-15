@@ -5,7 +5,7 @@ import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PastWorks from './COMPONENTS/PAST_WORKS/pastworks';
 import Footer from './COMPONENTS/FOOTER/Footer';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './COMPONENTS/Navbar';
 import Join_us from './COMPONENTS/JOIN US/Join_us';
 import Display_representatives from './COMPONENTS/ADMIN/MANAGE STATE REPRESENTATIVE/Display_representatives';
 function App() {
