@@ -1,29 +1,43 @@
 .heading{
-	width: 100%;
+    position: relative;
+    display: inline;
     text-align: center;
-    margin-top:5%;
+    font-family: -webkit-body;
+    margin-left: 33%;
+    margin-top: 2%;
+}
+
+.heading h1{
+    font-size: 50px;
+    font-weight: 600;
 }
 
 .box{
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 	text-align: left;
     padding: 5px;
-    margin-bottom: 5%; 
+    margin-bottom: 2%; 
 }
+
 .img {
+    display: flex;
+    position: relative;
     margin-left: 7%;
 }
+
 .img > img {
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 400px;
 }
 
 .content {
-    line-height: 30px;
+    position: relative;
     letter-spacing: 2px;
-    font-size: 22px;
-    padding: 36px;
-    margin-right: 5%;
+    font-size: 20px;
+    padding: 80px;
+    margin-right: 4.5%;
+    font-weight:500;
 }
