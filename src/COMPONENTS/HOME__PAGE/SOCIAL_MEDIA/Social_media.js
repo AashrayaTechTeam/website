@@ -7,7 +7,7 @@ import '../../../styles/Home.css'
 function Social_media() {
   return (
     <div style={{width:"100%" , height:"300px",textAlign:"center" , margin:"100px 0px"}}>
-      <h1 style={{margin:"60px"}}>Social Media Handles</h1>
+      <h1 style={{margin:"60px",color:"black"}}>Social Media Handles</h1>
     <div className="social-icon">
       <img src ={instagram} alt="Instagram"/>
       <img src ={facebook} alt="facebook"/>

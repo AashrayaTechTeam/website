@@ -4,7 +4,7 @@ import library from '../../../ASSETS/statistics/library.png'
 import volunteers from '../../../ASSETS/statistics/volunteers.png'
 function Aashraya_stats() {
   return (
-    <div style={{textAlign:"center", margin:"70px 0px"}}>
+    <div style={{textAlign:"center", margin:"70px 0px",color:"black"}}>
       <h1>Aashraya Stats</h1>
     <div style={{height:"500px"  , display:"flex" , justifyContent:"center" }}>
       <div style={{margin:"100px" , display:"flex" , flexDirection:"column", textAlign:"center",width:"130px"}}>
