@@ -4,7 +4,7 @@ function Testimonial() {
   return (
     <div>
   <div class="slider">
-  <h1 style={{color:"black}}>Our Mentors</h1>
+  <h1 style={{color:"black"}}>Our Mentors</h1>
   <input type="radio" name="testimonial" id="t-1" />
   <input type="radio" name="testimonial" id="t-2" />
   <input type="radio" name="testimonial" id="t-3" checked />
