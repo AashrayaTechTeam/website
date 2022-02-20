@@ -2,12 +2,13 @@ import React from 'react'
 import books from '../../../ASSETS/statistics/books.png'
 import library from '../../../ASSETS/statistics/library.png'
 import volunteers from '../../../ASSETS/statistics/volunteers.png'
+import '../../../styles/Aashraya_stats.css'
 function Aashraya_stats() {
   return (
-    <div style={{textAlign:"center", margin:"70px 0px"}}>
+    <div style={{textAlign:"center", paddingTop:"240px",color:"black"}}>
       <h1>Aashraya Stats</h1>
     <div style={{height:"500px"  , display:"flex" , justifyContent:"center" }}>
-      <div style={{margin:"100px" , display:"flex" , flexDirection:"column", textAlign:"center",width:"130px"}}>
+      <div className="icon-stats">
           <img src={volunteers} alt='icon'/>
           <div style={{margin:"30px 10px"}}>
             <h3><strong>Total Volunteers</strong></h3>
@@ -15,7 +16,7 @@ function Aashraya_stats() {
           </div>
       </div>
 
-      <div style={{margin:"100px" , display:"flex" , flexDirection:"column", textAlign:"center",width:"130px"}}>
+      <div className="icon-stats">
         <img src={library} alt='icon'/>
           <div style={{margin:"30px 10px"}}>
             <h3><strong>Total Libraries</strong></h3>
@@ -23,7 +24,7 @@ function Aashraya_stats() {
           </div>
       </div>
 
-      <div style={{margin:"100px" , display:"flex" , flexDirection:"column", textAlign:"center",width:"130px"}}>
+      <div className='icon-stats'>
           <img src={books} alt='icon'/>
           <div style={{margin:"30px 10px"}}>
             <h3><strong>Total Books</strong></h3>

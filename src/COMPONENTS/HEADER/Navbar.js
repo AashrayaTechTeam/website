@@ -1,66 +1,44 @@
-import React from 'react'
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { Link } from 'react-router-dom';
-import Logo from '../../ASSETS/logo.jpg'
+import React , {useState , useEffect} from 'react'
+import { Link ,useHistory} from 'react-router-dom'
+import $ from 'jquery'
+import '../../styles/Navbar/Navbar.css'
+import donate from "../../ASSETS/donate-vector.png"
 function Navbar() {
-    return (
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <Link to="/" class="navbar-brand"><img alt='Aashraya' style={{width:"40px"}} src={Logo}/></Link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Team
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><Link to="/assam_representative" class="dropdown-item" >Assam</Link></li>
-            <li><a class="dropdown-item" href="#">Bihar</a></li>
-            <li><a class="dropdown-item" href="#">MP</a></li>
-          </ul>
-        </li>
-        {/* <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Volunteers
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link to="/assam_volunteers" class="dropdown-item" >Assam</Link></li>
-            <li><a class="dropdown-item" href="#">Bihar</a></li>
-            <li><a class="dropdown-item" href="#">MP</a></li>
-          </ul>
-        </li> */}
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About Us</a>
-        </li>   
-        <li class="nav-item">
-          <Link to ="/join_us" class="nav-link active" aria-current="page" >Join Us</Link>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/library">Library</a>
-        </li>  
-        <li class="nav-item">
-          <Link to ="/past_works" class="nav-link active" aria-current="page" >Past Works</Link>
-        </li> 
+  window.addEventListener('scroll' , function(){
+    let res = window.scrollY;
+    if(res >= 150)
+      $("#navbar").css({'backgroundColor':'rgba(0, 0, 0, 0.884)' , 'padding':'10px 20px' , 'transition':'all 1s' })  
+    else
+      $("#navbar").css({'backgroundColor':'transparent' , 'padding':'40px 60px' })
+    
+  
+  })
 
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+  return (
+    <div>
+      <nav id="navbar" className='navbar' style={{background:"transparent" , padding:"40px", width:"100%", height:"70px",
+    color:"white" , position:"fixed" , top:"0%" , left:"0%" , zIndex:"5"
+    }}>
+         <Link to="/" style={{textDecoration:"none"}}><div class="nav-logo"><h3 class="logo">Aashraya</h3></div></Link>
+         {/* <Link to ="/admin" style={{textDecoration:"none", color:"white",cursor:"pointer"}}>Admin</Link> */}
+
+<ul class="nav-links" id="links" style={{position:"relative" , right:"3%"}}>
+  <li><Link to ="/saktiweek">Projects</Link></li>
+  <li><Link to ="/saktiweek">Gallery</Link></li>
+  <li><Link to ="/saktiweek">Blog</Link></li>
+  <li><Link to ="/saktiweek">Team</Link></li>
+  <li><Link to ="/saktiweek">Library</Link></li>
+  <li><Link to ="/join_us">Join Us</Link></li>
+  <li><Link to ="/saktiweek" style={{zIndex:"3"}}>Donate</Link></li>
+  <img src={donate} alt="..."/>
+</ul>
+      </nav>
     </div>
-  </div>
-</nav>
-        </div>
-    )
+
+  )
 }
 
 export default Navbar
