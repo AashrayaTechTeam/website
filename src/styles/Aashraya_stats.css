@@ -1,0 +1,14 @@
+.icon-stats{
+    margin:100px;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    width:130px;
+
+}
+.icon-stats > img {
+    transition: all 0.4s ease-in-out ;
+}
+.icon-stats > img:hover{
+    transform: scale(1.2);
+}
