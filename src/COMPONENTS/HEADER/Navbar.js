@@ -23,16 +23,16 @@ function Navbar() {
     color:"white" , position:"fixed" , top:"0%" , left:"0%" , zIndex:"5"
     }}>
          <Link to="/" style={{textDecoration:"none"}}><div class="nav-logo"><h3 class="logo">Aashraya</h3></div></Link>
-         <Link to ="/admin" style={{textDecoration:"none", color:"white",cursor:"pointer"}}>Admin</Link>
+         {/* <Link to ="/admin" style={{textDecoration:"none", color:"white",cursor:"pointer"}}>Admin</Link> */}
 
 <ul class="nav-links" id="links" style={{position:"relative" , right:"3%"}}>
-  <li><Link to ="/project">Projects</Link></li>
-  <li><Link to ="/gallery">Gallery</Link></li>
-  <li><Link to ="/blog">Blog</Link></li>
-  <li><Link to ="/team">Team</Link></li>
-  <li><Link to ="/library">Library</Link></li>
+  <li><Link to ="/saktiweek">Projects</Link></li>
+  <li><Link to ="/saktiweek">Gallery</Link></li>
+  <li><Link to ="/saktiweek">Blog</Link></li>
+  <li><Link to ="/saktiweek">Team</Link></li>
+  <li><Link to ="/saktiweek">Library</Link></li>
   <li><Link to ="/join_us">Join Us</Link></li>
-  <li><Link to ="/donate" style={{zIndex:"3"}}>Donate</Link></li>
+  <li><Link to ="/saktiweek" style={{zIndex:"3"}}>Donate</Link></li>
   <img src={donate} alt="..."/>
 </ul>
       </nav>
