@@ -7,8 +7,9 @@ import '../../../styles/Home.css'
 import { Link } from 'react-router-dom'
 function Social_media() {
   return (
-    <div className='social-container'>
-      <h1 style={{paddingTop:"100px" , paddingBottom:"40px"}}>Social Media Handles</h1>
+
+    <div style={{width:"100%" , height:"300px",textAlign:"center" , margin:"100px 0px"}}>
+      <h1 style={{margin:"60px",color:"black"}}>Social Media Handles</h1>
     <div className="social-icon">
       <a href='https://www.instagram.com/aashraya_07/'><img src ={instagram} alt="Instagram"/></a>
       <a href='https://www.facebook.com/TeamAashraya'><img src ={facebook} alt="facebook"/></a>
