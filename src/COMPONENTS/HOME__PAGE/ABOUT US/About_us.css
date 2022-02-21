@@ -2,45 +2,31 @@
     color:black;
 }
 .heading{
-    position: relative;
-    display: inline;
+	width: 100%;
     text-align: center;
-    font-family: -webkit-body;
-    margin-left: 33%;
-    margin-top: 2%;
-}
-
-.heading h1{
-    font-size: 50px;
-    font-weight: 600;
+    margin-top:5%;
 }
 
 .box{
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 	text-align: left;
     padding: 5px;
-    margin-bottom: 2%; 
+    margin-bottom: 5%; 
 }
-
 .img {
-    display: flex;
-    position: relative;
     margin-left: 7%;
 }
-
 .img > img {
-    height: 350px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 
 .content {
-    position: relative;
+    line-height: 30px;
     letter-spacing: 2px;
-    font-size: 20px;
-    padding: 80px;
-    margin-right: 4.5%;
-    font-weight:500;
+    font-size: 22px;
+    padding: 36px;
+    margin-right: 5%;
 }
