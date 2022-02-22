@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'
 
 function About_us() {
     useEffect(() => {
-        Aos.init({ duration: 3000 });
+        Aos.init({ duration: 2000 });
     }, []) ;
 
     return (

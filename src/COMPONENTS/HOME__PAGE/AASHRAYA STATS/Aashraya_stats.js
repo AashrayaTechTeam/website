@@ -8,7 +8,7 @@ import 'aos/dist/aos.css'
 
 function Aashraya_stats() {
   useEffect(() => {
-    Aos.init({ duration: 3000 });
+    Aos.init({ duration: 2000 });
 }, []) ;
 
   return (

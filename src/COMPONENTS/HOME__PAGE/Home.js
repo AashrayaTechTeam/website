@@ -15,15 +15,15 @@ import 'aos/dist/aos.css'
 
 function Home() {
     useEffect(() => {
-        Aos.init({ duration: 3000 });
+        Aos.init({ duration: 2000});
     }, []) ;
 
     return (
         <>
-        <div style={{position:"relative"}}>
+        <div style={{position:"relative", overflowX:"hidden"}}>
             <SlideShow/>
 
-            <div style={{background: "black"}}>
+            <div style={{background: "black", overflowX:"hidden"}}>
             <h2 style={{color:"white",textAlign:"center",top:"90px",zIndex:"3",position:"relative"}} data-Aos="fade-down">On INTERNATIONAL WOMEN'S DAY</h2>
             <div style={{display:"flex",position:"relative",height:"500px",justifyContent:"center",alignItems:"center"}}>
                 <div><img src={sakti} data-Aos="zoom-in"/></div>
