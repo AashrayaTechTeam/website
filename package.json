@@ -1,5 +1,5 @@
 {
-  "name": "fundraise",
+  "name": "responsive-website",
   "version": "0.1.0",
   "homepage": "https://himangshu1086.github.io/OfficalSiteAashraya/",
   "private": true,
@@ -46,5 +46,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
