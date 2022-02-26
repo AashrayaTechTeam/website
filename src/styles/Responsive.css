@@ -1,0 +1,571 @@
+@media only screen and (min-width: 1200px) {
+}
+/* 
+@media (max-width: 900px) {
+  .nav-logo .logo {
+    width: 100%;
+    text-align: Center;
+    position: absolute;
+  }
+  .nav-links {
+    opacity: 1;
+    visibility: none;
+    padding: 10px 30px;
+    display: flex;
+  
+
+  }
+  .nav-links li a {
+     position: absolute;
+    text-align: left; 
+ width: 100%;
+  }
+}  */
+@media (max-width: 600px) {
+  .nav-logo .logo {
+    width: 100%;
+    text-align: Center;
+    position: absolute;
+  }
+  .nav-links {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .nav-links li a {
+    position: absolute;
+    text-align: right;
+    width: 100%;
+  }
+  /* slideshow */
+  .bg-image{
+    position: absolute;
+  }
+  .bg-background {
+    position: absolute;
+  }
+  /* Join-Us */
+  .bg-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-51%, -51%);
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    color: white;
+    line-height: 16px;
+    letter-spacing: 1px;
+  }
+  .bg-text h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .bg-text p {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .joinUsDiv {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+  }
+
+  .joinUs {
+    float: right;
+    border: 2px solid white;
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+  }
+  .joinUs a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+/* Shakti-week */
+
+.sakti-container{
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  top:0px;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden; 
+}
+.sakti-container > div{
+  position: relative;
+  left: 27%;
+  top: 40%;
+  color:white;
+}
+.sakti-container > div > h1{
+  font-size:16px;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0);
+}
+
+
+/* anouncements */
+.anouncements {
+  position: absolute;
+}
+.anouncements h1 {
+  width : 100%;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing : 0.03em;
+  text-align: Center;
+}
+
+/*  About-Us*/
+.heading{
+  /* width: 100%; */
+  padding: 10px 25px;
+  text-align: center !important;
+    
+}
+.heading h1{
+  position: absolute;
+  text-align: Center !important;
+  font-size: 25px;
+  /* font-weight: none; */
+  color: black;
+  
+}
+.box{
+  
+  display: relative;
+  justify-content: center;
+  align-items: center;
+text-align: left;
+  padding: 5px;
+  margin-bottom: 5%; 
+}
+/* .img {
+  margin-left: 7%;
+} */
+.img > img {
+  height: 180px;
+  width: 180px;
+}
+
+.content {
+  
+  letter-spacing: 2px;
+  font-size: 17px;
+  }
+
+/* Mentors Page: testimonials*/
+.mycard {
+  height: 100%;
+  width: 100%;
+  max-width: 24rem;
+}
+.cardtitle {
+  /* font-weight: bold; */
+  /* --tw-text-opacity: 1; */
+  color: black !important;
+  font-size: 20px;
+  font-weight: 600;
+
+  /* color: rgba(31, 41, 55, var(--tw-text-opacity)); */
+  text-align: center;
+}
+.cardimg {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.75rem;
+  margin-bottom: 2.75rem;
+  max-height: 6rem;
+  border-radius: 9999px;
+}
+.carddescription {
+  /* --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity)); */
+  color:#3b344d !important;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.slider {
+  width: 100%;
+  height: 500px;
+}
+.slider > input {
+  display: none !important;
+}
+.slider > h1{
+  position: relative;
+  text-align:center;
+}
+.testimonials {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 350px;
+  perspective: 300px;
+  margin-top: 5rem;
+  /* overflow: hidden; */
+}
+.testimonials .item {
+  max-width: 20rem;
+  border-radius: 1.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgba(30, 58, 138, var(--tw-border-opacity));
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 10px;
+  width: 350px;
+  text-align: center;
+  transition: transform 0.4s;
+  -webkit-transform-style: preserve-3d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  cursor: pointer;
+}
+.testimonials .item img {
+  width: 100px;
+  border-radius: 50%;
+  border: 13px solid #3b344d;
+}
+.testimonials .item p {
+  color: #ddd;
+}
+.testimonials .item h2 {
+  font-size: 13px;
+}
+.dots {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dots label {
+  position: relative
+  display: block;
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #413b52;
+  margin: 7px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+/* First */
+#t-1:checked ~ .dots label[for="t-1"] {
+  transform: scale(2);
+  background-color: #fff;
+}
+#t-1:checked ~ .dots label[for="t-2"] {
+  transform: scale(1.5);
+}
+#t-1:checked ~ .testimonials label[for="t-1"] {
+  z-index: 4;
+}
+#t-1:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(300px) translateZ(-90px) translateY(-15px);
+
+  z-index: 3;
+}
+#t-1:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(600px) translateZ(-180px) translateY(-30px);
+  z-index: 2;
+}
+#t-1:checked ~ .testimonials label[for="t-4"] {
+  transform: translateX(900px) translateZ(-270px) translateY(-45px);
+  z-index: 1;
+}
+#t-1:checked ~ .testimonials label[for="t-5"] {
+  transform: translateX(1200px) translateZ(-360px) translateY(-60px);
+}
+
+/* Second */
+#t-2:checked ~ .dots label[for="t-1"] {
+  transform: scale(1.5);
+}
+#t-2:checked ~ .dots label[for="t-2"] {
+  transform: scale(2);
+  background-color: #fff;
+}
+#t-2:checked ~ .dots label[for="t-3"] {
+  transform: scale(1.5);
+}
+#t-2:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+}
+#t-2:checked ~ .testimonials label[for="t-2"] {
+  z-index: 3;
+}
+#t-2:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(300px) translateZ(-90px) translateY(-15px);
+  z-index: 2;
+}
+#t-2:checked ~ .testimonials label[for="t-4"] {
+  transform: translateX(600px) translateZ(-180px) translateY(-30px);
+  z-index: 1;
+}
+#t-2:checked ~ .testimonials label[for="t-5"] {
+  transform: translateX(900px) translateZ(-270px) translateY(-45px);
+}
+
+/* Third */
+#t-3:checked ~ .dots label[for="t-2"] {
+  transform: scale(1.5);
+}
+#t-3:checked ~ .dots label[for="t-3"] {
+  transform: scale(2);
+  background-color: #fff;
+}
+#t-3:checked ~ .dots label[for="t-4"] {
+  transform: scale(1.5);
+}
+#t-3:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+}
+#t-3:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+}
+#t-3:checked ~ .testimonials label[for="t-3"] {
+  z-index: 3;
+}
+#t-3:checked ~ .testimonials label[for="t-4"] {
+  transform: translateX(300px) translateZ(-90px) translateY(-15px);
+  z-index: 2;
+}
+#t-3:checked ~ .testimonials label[for="t-5"] {
+  transform: translateX(600px) translateZ(-180px) translateY(-30px);
+}
+
+/* Fourth */
+#t-4:checked ~ .dots label[for="t-3"] {
+  transform: scale(1.5);
+}
+#t-4:checked ~ .dots label[for="t-4"] {
+  transform: scale(2);
+  background-color: #fff;
+}
+#t-4:checked ~ .dots label[for="t-5"] {
+  transform: scale(1.5);
+}
+#t-4:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+}
+#t-4:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+}
+#t-4:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+  z-index: 2;
+}
+#t-4:checked ~ .testimonials label[for="t-4"] {
+  z-index: 3;
+}
+#t-4:checked ~ .testimonials label[for="t-5"] {
+  transform: translateX(300px) translateZ(-90px) translateY(-15px);
+}
+
+/* Fifth */
+#t-5:checked ~ .dots label[for="t-4"] {
+  transform: scale(1.5);
+}
+#t-5:checked ~ .dots label[for="t-5"] {
+  transform: scale(2);
+  background-color: #fff;
+}
+#t-5:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-1200px) translateZ(-360px) translateY(-60px);
+}
+#t-5:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+  z-index: 1;
+}
+#t-5:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+  z-index: 2;
+}
+#t-5:checked ~ .testimonials label[for="t-4"] {
+  transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+  z-index: 3;
+}
+#t-5:checked ~ .testimonials label[for="t-5"] {
+  z-index: 4;
+}
+
+
+
+
+/* Aashraya past-events: carousel*/
+.carousel-caption {
+  margin-bottom: 15rem;
+}
+.main-header {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.img-thumbnail {
+  width: 20rem;
+  height: 15rem;
+}
+body,
+html,
+* {
+  font-family: "Architects Daughter", cursive;
+}
+
+
+*,
+*:after,
+*:before {
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-o-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+-moz-user-select: none;
+user-select: none;
+cursor: default;
+}
+
+.testim {
+width: 100%;
+/* height: 500px; */
+background-color: black;
+/* position: relative; */
+/* margin: 80px 0px; */
+overflow: hidden;
+}
+
+.wrap{
+overflow: hidden;
+display: flex;
+position: relative;
+justify-content: center;
+align-items: center;
+}
+.wrap > img{
+width: 100%;
+position: relative;
+height:425px;
+transition: all 1s ease-in-out;
+opacity: 0.4;
+}
+.wrap>img:hover{
+transform: scale(1.1);
+opacity: 0.5;
+}
+
+.content-project{
+position: absolute;
+text-align: center;
+top:30%;
+width: 50%;
+color: rgb(226, 243, 255);
+}
+.content-project > h2{
+position: relative;
+text-align: center;
+font-weight: 600;
+letter-spacing: 2px;
+}
+
+.content-project > p{
+font-size: 18px;
+}
+.content-project > button{
+border: none;
+width:30%;
+padding: 7px;
+border-radius: 5px;
+background-color: rgba(86, 195, 228, 0.74);
+box-shadow: inset;
+transition: all 0.6s ease-in-out;
+}
+
+.content-project>button:hover{
+background-color: rgb(86, 195, 228);
+color: rgb(0, 0, 0);
+font-weight: 400;
+}
+
+
+/* Social-media handels and social_media */
+.media-handels h3 {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+
+} 
+.social-icon > a > img {
+  width: 100px;
+ transition: all 0.4s ease-in-out;
+}
+.social-container {
+  transition: all 0.6s ease-in-out;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.social-icon > a > img:hover {
+  transform: rotate(-10deg);
+}
+
+
+
+/*  Aashraya Stats*/
+.text-stats {
+  position: relative;  
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.icon-stats {
+  
+  display:flex;
+  flex-direction: column;
+  text-align:center !important;
+  width:130px;
+
+}
+.icon-stats h3{
+  font-size: 18px;
+  text-align: center !important;
+  
+  
+
+}
+.icon-stats > img {
+  transition: all 0.4s ease-in-out ;
+}
+.icon-stats > img:hover{
+  transform: scale(1.2);
+}
+
+/* Footer */
+}
+}
