@@ -2,8 +2,9 @@ import React from 'react'
 
 function Join_us() {
     return (
-        <div>
-            <form style={{display:"flex" , flexDirection:"column" , position:"absolute" , top:"10%" , left:"25%" ,  padding:"20px" , width:"700px"}}>
+        <div style={{backgroundColor:"blue !Important"}}>
+            <div style={{backgroundColor:"black",display:"flex",justifyContent:"center",position:"absolute",top:"0%",color:"white",margin:"auto",width:"100%"}}>
+            <form style={{padding:"100px 0px",display:"flex" , flexDirection:"column"}}>
             <div style={{textAlign:"center"}}>
                 <h1>Join Us</h1>
             </div>
@@ -11,9 +12,9 @@ function Join_us() {
             <label for="exampleInputPassword1" class="form-label">State</label>
                 <select class="form-select" required aria-label="Default select example">
                     <option selected disabled>State</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="1">Andra Pradesh</option>
+                    <option value="2">Assam</option>
+                    <option value="3">Karnataka</option>
                 </select>
                 </div>
                 <div class="mb-3">
@@ -38,7 +39,7 @@ function Join_us() {
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Pincode</label>
-                    <input type="text" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    <input type="number" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 </div>
                     <label class="form-check-label" for="exampleCheck1">Aru you ready to Volunteer for free for the welfare of the students? </label>
                 <div style={{display:"flex"}}>
@@ -61,6 +62,7 @@ function Join_us() {
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+        </div>
         </div>
     )
 }

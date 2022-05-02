@@ -259,7 +259,7 @@ body {
   align-items: center;
 }
 .dots label {
-  position: relative
+  position: relative;
   display: block;
   height: 3px;
   width: 3px;
@@ -537,7 +537,8 @@ font-weight: 400;
 
 
 
-/*  Aashraya Stats*/
+/*Aashraya Stats*/
+
 .text-stats {
   position: relative;  
   font-size: 20px;
@@ -566,6 +567,6 @@ font-weight: 400;
   transform: scale(1.2);
 }
 
-/* Footer */
+
 }
-}
+

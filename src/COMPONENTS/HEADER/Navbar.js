@@ -52,19 +52,19 @@ function Navbar() {
             <Link to="/saktiweek">Projects</Link>
           </li>
           <li>
-            <Link to="/saktiweek">Gallery</Link>
-          </li>
-          <li>
             <Link to="/saktiweek">Blog</Link>
           </li>
           <li>
-            <Link to="/saktiweek">Team</Link>
+            <Link to="/team">Team</Link>
           </li>
           <li>
             <Link to="/saktiweek">Library</Link>
           </li>
           <li>
             <Link to="/join_us">Join Us</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/saktiweek" style={{ zIndex: "3" }}>
