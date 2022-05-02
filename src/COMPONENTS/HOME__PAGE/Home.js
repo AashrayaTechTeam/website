@@ -20,6 +20,7 @@ function Home() {
 
     return (
         <>
+        <div style={{width:"70px",height:"70px",backgroundColor:"lightblue",margin:"20px",zIndex:"5",display:"flex",justifyContent:"center",borderRadius:"100%",position:"fixed",right:"0%",bottom:"0%",color:"black"}}><span style={{margin:"auto",fontWeight:"bolder"}}>Chat</span></div>
         <div style={{position:"relative", overflowX:"hidden"}}>
             <SlideShow/>
 
