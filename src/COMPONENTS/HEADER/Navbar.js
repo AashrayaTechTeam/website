@@ -49,6 +49,9 @@ function Navbar() {
           style={{ position: "relative", right: "3%" }}
         >
           <li>
+            <Link to="/admin/admin_handle">ADMIN TESTING</Link>
+          </li>
+          <li>
             <Link to="/saktiweek">Projects</Link>
           </li>
           <li>

@@ -2,11 +2,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/Footer.css'
-
+import img from '../../ASSETS/logo.jpg'
 function Footer() {
     return (
-        <div style={{width:"100%" , height:"auto" ,position:"absolute",bottom:"0%", background:"#144C6B" , color:"white" , textAlign:"center"}}>
+        <div style={{width:"100%" , height:"auto" ,padding:"20px 0px",position:"relative", background:"#144C6B" , color:"white" , textAlign:"center"}}>
             <footer className='footer-box'>
+                <section>
+                    <img style={{width:"200px",borderRadius:"30px"}} src={img}/>
+                </section>
                 <section className='quick-link'>
                     <span>Donate</span>
                     <span>Blogs</span>
@@ -34,8 +37,9 @@ function Footer() {
             <div className='footer-bottom'>
                <p>Thanks for your contribution for the wellbeing of the human race.</p>
                <p>Build with ❤️ from Team Aashraya @2022</p>
+               <Link to="/admin"><button className='btn p-4 ' style={{position:"absolute",background:"white",left:"0",bottom:"0",opacity:"0"}}>Admin</button></Link>
             </div>
-            <Link to="/admin"><button className='btn p-4 ' style={{position:"absolute",right:"0",bottom:"0",opacity:"0"}}>Admin</button></Link>
+            
         </div>
     )
 }

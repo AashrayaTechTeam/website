@@ -27,6 +27,47 @@
   color: white;
 }
 
+.bg-text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  line-height: 30px;
+  letter-spacing: 3px;
+}
+.bg-text h1 {
+  text-align: left;
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+}
+.bg-text p {
+  font-size: 16px;
+}
+.joinUsDiv {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.joinUs {
+  float: right;
+  border: 3px solid white;
+  padding: 10px 25px;
+  color: white;
+  cursor: pointer;
+}
+.joinUs a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* 
 @media screen and (max-width: 390px) {
   .bg-text {
     position: absolute;
@@ -232,4 +273,4 @@
     font-size: 25px;
     font-weight: bold;
   }
-}
+} */
