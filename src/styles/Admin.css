@@ -42,7 +42,7 @@
 
 .box-admin{
     margin-top: 5%;
-    height: 90vh;
+    min-height: 100vh;
     display: flex;
     background-image: linear-gradient(to bottom right, rgb(225, 101, 227),rgb(83, 171, 209));
 }

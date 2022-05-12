@@ -38,6 +38,10 @@ function Join_us() {
                     <input type="text" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 </div>
                 <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">District</label>
+                    <input type="text" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Pincode</label>
                     <input type="number" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 </div>
