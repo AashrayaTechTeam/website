@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import books from "../../../ASSETS/statistics/books.png";
 import library from "../../../ASSETS/statistics/library.png";
 import volunteers from "../../../ASSETS/statistics/volunteers.png";
@@ -10,6 +10,44 @@ function Aashraya_stats() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+
+  const [Email,setEmail] = useState("");
+  const [Name ,setName] = useState("");
+  const [Message,setMessage] = useState("");
+
+  const submitHandle = async(e)=>{
+    e.preventDefault();
+    try{
+      const res = await fetch('/addContact' ,{
+      method:"POST" ,
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+       Email,Name,Message
+      })
+    });
+    const data = await res.json();
+    if(data.status === 422 || !data)
+    {
+      window.alert("Invalid Credentials");
+      console.log("Invalid Credentials");
+  }
+      if(data.error){
+        window.alert("Invalid Credentials")
+      }
+    else
+    {
+      window.alert("Thanks for your response. We will get back to you soon..")
+      window.location.reload();
+    }
+    
+  }
+  catch(err){
+      console.log(err);
+  }
+  }
+
 
   return (
     <div
@@ -56,10 +94,10 @@ function Aashraya_stats() {
         </div>
                     <form className="form-container-box">
                         <h1>Contact Us</h1>
-                        <input type="email" placeholder='Email'/>
-                        <input type="text" placeholder='Name'/>
-                        <textarea type="text" placeholder='Message'/>
-                        <button>Send</button>
+                        <input value={Email} onChange = {(e)=>{setEmail(e.target.value)}} type="email" placeholder='Email'/>
+                        <input value={Name} onChange = {(e)=>{setName(e.target.value)}} type="text" placeholder='Name'/>
+                        <textarea value={Message} onChange = {(e)=>{setMessage(e.target.value)}} type="text" placeholder='Message'/>
+                        <button onClick={submitHandle} >Send</button>
                     </form>
                 </div>
     </div>

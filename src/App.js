@@ -10,6 +10,11 @@ import SaktiWeek from "./Temp Component/Sakti Week/SaktiWeek";
 import ListTeam from "./COMPONENTS/TEAM/ListTeam";
 import About from "./COMPONENTS/ABOUT/About";
 import AdminHandle from "./ADMIN/AdminHandle";
+import SlideShow_detail from "./COMPONENTS/SLIDESHOW_DETAIL_PAGE/SlideShow_detail";
+import Poster from "./COMPONENTS/HOME__PAGE/POSTER/Poster";
+import BookDonationDrive from "./COMPONENTS/HOME__PAGE/PAST WORK/BookDonationDrive";
+import Career from "./COMPONENTS/CAREER/Career";
+import PageNotFound from "./PageNotFound";
 function App() {
   return (
     <Router>
@@ -28,8 +33,17 @@ function App() {
           <Join_us />
         </Route>
         <Route path="/saktiweek" component={SaktiWeek} />
-        <Route path="/admin" component={Admin} />
-        <Route path="/" component={Home} />
+        <Route path="/admin">
+          <Admin/>
+        </Route>
+        <Route path ="/career" component ={Career}/>
+        <Route path="/BookDonationDrive" component={BookDonationDrive} />
+        <Route path="/poster"  component={Poster} />
+        <Route path="/:id" component={SlideShow_detail} />
+        <Route path="/" component={Home} exact={true} />
+        <Route path="*" exact={true} >
+              <PageNotFound/>
+            </Route>
       </Switch>
     </Router>
   );
