@@ -3,7 +3,11 @@ import { Link, useHistory } from "react-router-dom";
 import $ from "jquery";
 import "../../styles/Navbar/Navbar.css";
 import donate from "../../ASSETS/donate-vector.png";
+import {AuthAdmin} from '../../ADMIN/AuthCheck' 
 function Navbar() {
+
+  const role = AuthAdmin();
+
   window.addEventListener("scroll", function () {
     let res = window.scrollY;
     if (res >= 150)
@@ -48,9 +52,10 @@ function Navbar() {
           id="links"
           style={{ position: "relative", right: "3%" }}
         >
-          <li>
-            <Link to="/admin/admin_handle">ADMIN TESTING</Link>
-          </li>
+          {
+            role ? <li><Link to="/admin/admin_handle/slideshow">Admin Dashboard</Link></li>:<></>
+          }
+          
           <li>
             <Link to="/saktiweek">Projects</Link>
           </li>
@@ -65,6 +70,9 @@ function Navbar() {
           </li>
           <li>
             <Link to="/join_us">Join Us</Link>
+          </li>
+          <li>
+            <Link to="/career">Career</Link>
           </li>
           <li>
             <Link to="/about">About</Link>

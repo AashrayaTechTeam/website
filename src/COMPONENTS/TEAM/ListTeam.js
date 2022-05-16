@@ -1,149 +1,110 @@
-import { Dropdown } from 'bootstrap'
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import "../../styles/Teamlist.css"
 function ListTeam() {
+
+    const [Team , setTeam] = useState({})
+    const [AllTeam , setAllTeam] = useState({})
+    const [loading,setLoading] = useState(true)
+    const [Designation,setDesignation] = useState("")
+    const [State,setState] = useState("")
+
+    //get the state Leads
+  useEffect( async()=>{
+    const res = await fetch("/getStateRep" , {
+      method:"GET" ,
+      headers:{
+        Accept:"application/json",
+        "Content-Type":"application/json",
+      } , 
+      credentials:"include"
+    });
+    const data = await res.json();
+    setTeam(data);
+
+    const res2 = await fetch("/getStateRep" , {
+        method:"GET" ,
+        headers:{
+          Accept:"application/json",
+          "Content-Type":"application/json",
+        } , 
+        credentials:"include"
+      });
+      const data2 = await res2.json();
+      setAllTeam(data2);
+    setLoading(false)
+  },[])
+
+
+  const searchHandle = async(Designation,State)=>{
+    
+    if(Designation) 
+        {
+            const res = AllTeam.filter(element =>element.Designation===Designation)
+            setTeam(res)
+        }
+    if(State)
+    {
+        const res = AllTeam.filter(element =>element.State===State)
+        setTeam(res)
+    }
+  }
+
+  if(loading)
+    return<>Loading...</>
+
+
   return (
 <div style={{backgroundColor:"black",width:"100%",top:"0%",height:"100vh",position:"absolute"}}>
 
         <div class="dropdown dropdown-btn">
-        <button class="btn btn-primary w-25  m-3 p-3 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Core Member
-        </button>
-        <div class="dropdown-menu w-25" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">State Representative</a>
-            <a class="dropdown-item" href="#">Tech Team Member</a>
-            <a class="dropdown-item" href="#">Media Team</a>
-            <a class="dropdown-item" href="#">PR Team</a>
-            <a class="dropdown-item" href="#">Management Team</a>
-            <a class="dropdown-item" href="#">Fundraise Team</a>
-        </div>
-        <button class="btn btn-primary w-25  m-3 p-3 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Volunteers
-        </button>
-        <div class="dropdown-menu w-25" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Andhra Pradesh</a>
-            <a class="dropdown-item" href="#">Assam</a>
-            <a class="dropdown-item" href="#">Arunachal Pradesh</a>
-            <a class="dropdown-item" href="#">Delhi</a>
-            <a class="dropdown-item" href="#">Harayana</a>
-            <a class="dropdown-item" href="#">Himachal Pradesh</a>
-        </div>
+        <select value={Designation} onChange={(e)=>{setDesignation(e.target.value)}}
+            required style={{padding:"15px",margin:"10px",color:"white",fontWeight:"bold",letterSpacing:"3px",
+            border:"none",width:"30%",borderRadius:"7px",background:"linear-gradient(to right, #12c2e9, #c471ed, #f64f59)"}}>
+            <option class="dropdown-item" hidden >Core Member</option>
+            <option class="dropdown-item" >State Representative</option>
+            <option class="dropdown-item" >Tech Team Member</option>
+            <option class="dropdown-item" >Media Team</option>
+            <option class="dropdown-item" >PR Team</option>
+            <option class="dropdown-item" >Management Team</option>
+            <option class="dropdown-item" >Fundraise Team</option>
+      </select>
+
+      <select value={State} onChange={(e)=>{setState(e.target.value)}}
+            required style={{padding:"10px",margin:"10px",color:"white",fontWeight:"bold",letterSpacing:"3px",
+            border:"none",width:"30%",borderRadius:"7px",background:"linear-gradient(to right, #12c2e9, #c471ed, #f64f59)"}}>
+            <option  class="dropdown-item" hidden >Volunteers</option>
+            <option  class="dropdown-item" >Andhra Pradesh</option>
+            <option  class="dropdown-item" >Assam</option>
+            <option  class="dropdown-item" >Madhya Pradesh</option>
+            <option  class="dropdown-item" >Karnataka</option>
+      </select>
+      <button className='btn btn-primary'   onClick={()=>{searchHandle(Designation,State)}}
+      style={{padding:"10px",margin:"10px",color:"black",fontWeight:"bold",letterSpacing:"3px",
+            border:"none",width:"150px",borderRadius:"7px",background:"linear-gradient(to right, #7474bf, #348ac7)"}}>Search</button>
         </div>
         
 
 
     <div className='team-list'>
 
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-            <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-                <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-                <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-                <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-                <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-                <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-                <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-                <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-        <div className='container card-team'>
-            <div className='box-image'>
-                <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </div>
-            <div className='detail-of-member'>
-                <strong>Name : Himangshu Baishya</strong>
-                <span>Designation : Team Lead</span>
-                <span>Location : Guwahati</span>
-                <span>Address : Guwahati,781103 </span>
-                <span>Contact : baishyahimagshu499@gmail.com </span>
-            </div>
-        </div>
-
-        
+        {
+            Team.map(member=>{
+                return(
+                    <div className='container card-team'>
+                        <div className='box-image'>
+                         <img src={member.profilePic}/>
+                        </div>
+                    <div className='detail-of-member'>
+                        <strong>Name : {member.Name}</strong>
+                        <span>Designation : {member.Designation} </span>
+                        <span>Location : {member.Location}</span>
+                        <span>Address : {member.Address} </span>
+                        <span>Contact : {member.email} </span>
+                    </div>
+                    </div>
+                )
+            })
+        }        
 
     </div>
 </div>

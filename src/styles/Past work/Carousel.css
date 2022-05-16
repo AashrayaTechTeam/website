@@ -76,7 +76,9 @@ opacity: 0.5;
 }
 
 .content-project > p{
-  font-size: 19px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  line-height: 25px;
 }
 .content-project > button{
   border: none;

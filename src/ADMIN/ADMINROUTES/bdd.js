@@ -1,6 +1,6 @@
 import React from 'react'
 
-function bdd() {
+function Bdd() {
   return (
     <div className='container-box'>
     <h2 className='heading border-bottom border-dark w-50 m-auto p-3'>Add paragraph about BDD</h2>
@@ -14,4 +14,4 @@ function bdd() {
   )
 }
 
-export default bdd
+export default Bdd
