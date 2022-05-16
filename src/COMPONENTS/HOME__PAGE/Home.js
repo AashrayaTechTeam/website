@@ -44,12 +44,18 @@ console.log(Object.keys(posters).length)
         <div style={{position:"relative", overflowX:"hidden"}}>
             <SlideShow/>
             <div style={{background: "black", overflowX:"hidden"}}>
-            <h2 style={{color:"white",textAlign:"center",top:"90px",zIndex:"3",position:"relative"}} data-Aos="fade-down">{posters.poster[Object.keys(posters).length].heading}</h2>
-            <div style={{display:"flex",position:"relative",height:"500px",justifyContent:"center",alignItems:"center"}}>
-                <div><img src={posters.poster[Object.keys(posters).length].imageUrl} data-Aos="zoom-in" style={{opacity:"0.8",width:"1000px",height:"500px"}}/></div>
-                <div style={{color:"white",padding:"20px",justifyContent:"center"}} >
-                    <p data-Aos="fade-left" style={{fontSize:"15px",lineHeight:"25px",letterSpacing:"2px"}}>
-                        {posters.poster[Object.keys(posters).length].smallPara}
+            <h2 className='h2' style={{color:"white",textAlign:"center",top:"60px",zIndex:"3",position:"relative"}} data-Aos="fade-down">On INTERNATIONAL WOMEN'S DAY</h2>
+            <div className='container' style={{display:"flex",position:"relative",height:"650px",justifyContent:"center",alignItems:"center"}}>
+                <div className='image'><img src={sakti} data-Aos="zoom-in"/></div>
+                <div style={{color:"white", justifyContent:"center", width:'1000px'}} >
+                    <p className='para' data-Aos="fade-left">
+                        Aashraya is an independent student(s)Organization which aims it's efforts for
+                        the holistic welfare of all living beings.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores 
+                        soluta sit perspiciatis culpa quis nulla vel dicta maxime dolore 
+                        optio minima officiis obcaecati aut, eius laborum corporis ducimus 
+                        officia nisi voluptas voluptatibus blanditiis ea! Lorem ipsum dolor 
+                        sit amet, consectetur adipisicing elit. Veniam, atque
                     </p>
                     <Link to="/poster" style={{textDecoration:"none"}}><h4 style={{textAlign:"center", color:"white" , position:"relative" , borderRadius:"5px",
                     margin:"auto",padding:"7px", width:"30%",backgroundColor: "rgba(86, 195, 228, 0.74)",
