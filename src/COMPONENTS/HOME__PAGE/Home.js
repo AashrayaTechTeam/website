@@ -25,11 +25,11 @@ function Home() {
             <SlideShow/>
 
             <div style={{background: "black", overflowX:"hidden"}}>
-            <h2 style={{color:"white",textAlign:"center",top:"90px",zIndex:"3",position:"relative"}} data-Aos="fade-down">On INTERNATIONAL WOMEN'S DAY</h2>
-            <div style={{display:"flex",position:"relative",height:"500px",justifyContent:"center",alignItems:"center"}}>
-                <div><img src={sakti} data-Aos="zoom-in"/></div>
-                <div style={{color:"white",padding:"20px",justifyContent:"center"}} >
-                    <p data-Aos="fade-left">
+            <h2 className='h2' style={{color:"white",textAlign:"center",top:"60px",zIndex:"3",position:"relative"}} data-Aos="fade-down">On INTERNATIONAL WOMEN'S DAY</h2>
+            <div className='container' style={{display:"flex",position:"relative",height:"650px",justifyContent:"center",alignItems:"center"}}>
+                <div className='image'><img src={sakti} data-Aos="zoom-in"/></div>
+                <div style={{color:"white", justifyContent:"center", width:'1000px'}} >
+                    <p className='para' data-Aos="fade-left">
                         Aashraya is an independent student(s)Organization which aims it's efforts for
                         the holistic welfare of all living beings.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores 
